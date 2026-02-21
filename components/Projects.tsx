@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ExternalLink, Github, ArrowUpRight, Monitor, Bot, FlaskConical, MessageSquare, TrendingUp, HardDrive } from 'lucide-react'
+import { Github, ArrowUpRight } from 'lucide-react'
 
 const projects = [
   {
@@ -13,10 +13,8 @@ const projects = [
     tech: ['Node.js', 'Tailscale', 'Telegram API', 'WebSocket'],
     github: 'https://github.com/chintan-diwakar/remote-terminal',
     live: null,
-    icon: null,
-    customIcon: '/remote-terminal.jpg',
+    icon: '/remote-terminal.jpg',
     accent: '#3b82f6',
-    emoji: '🖥️',
   },
   {
     title: 'Super Agent',
@@ -26,10 +24,8 @@ const projects = [
     tech: ['Python', 'LangGraph', 'LangChain', 'Slack API'],
     github: 'https://github.com/chintan-diwakar/super-agent',
     live: null,
-    icon: null,
-    customIcon: '/icons/super-agent.png',
+    icon: '/icons/super-agent.png',
     accent: '#f59e0b',
-    emoji: '🦸',
   },
   {
     title: 'CopyBrewery',
@@ -39,10 +35,8 @@ const projects = [
     tech: ['Python', 'OpenAI', 'Web Scraping', 'NLP'],
     github: 'https://github.com/ChintanDiwakar/copybrewery',
     live: null,
-    icon: null,
-    customIcon: '/icons/copybrewery.png',
+    icon: '/icons/copybrewery.png',
     accent: '#10b981',
-    emoji: '🧪',
   },
   {
     title: 'AskMyCode.xyz',
@@ -52,10 +46,8 @@ const projects = [
     tech: ['TypeScript', 'LLM', 'RAG', 'Privacy-first'],
     github: null,
     live: 'https://askmycode.xyz',
-    icon: null,
-    customIcon: '/icons/askmycode.png',
+    icon: '/icons/askmycode.png',
     accent: '#8b5cf6',
-    emoji: '💬',
   },
   {
     title: 'Zentickr Yahoo Query MCP',
@@ -65,10 +57,8 @@ const projects = [
     tech: ['TypeScript', 'MCP', 'Yahoo Finance', 'API'],
     github: 'https://github.com/chintan-diwakar/zentickr-yahoo-query-mcp',
     live: null,
-    icon: null,
-    customIcon: '/icons/zentickr.png',
+    icon: '/icons/zentickr.png',
     accent: '#ef4444',
-    emoji: '📈',
   },
   {
     title: 'AWS Utility',
@@ -78,10 +68,8 @@ const projects = [
     tech: ['Next.js', 'AWS SDK', 'S3', 'IAM'],
     github: null,
     live: 'https://aws-utility.vercel.app',
-    icon: null,
-    customIcon: '/icons/aws-utility.png',
+    icon: '/icons/aws-utility.png',
     accent: '#f97316',
-    emoji: '🪣',
   },
 ]
 
@@ -126,14 +114,10 @@ export default function Projects() {
                   {/* Icon + Title row */}
                   <div className="flex items-start gap-4 mb-4">
                     <div
-                      className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center text-lg overflow-hidden"
+                      className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden"
                       style={{ backgroundColor: `${project.accent}15` }}
                     >
-                      {(project as any).customIcon ? (
-                        <img src={(project as any).customIcon} alt={project.title} className="w-full h-full object-contain" />
-                      ) : project.icon ? (
-                        <project.icon size={20} style={{ color: project.accent }} />
-                      ) : null}
+                      <img src={project.icon} alt={project.title} className="w-full h-full object-contain" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-xl font-bold tracking-tight">{project.title}</h3>
