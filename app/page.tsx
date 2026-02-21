@@ -14,9 +14,9 @@ export default function Home() {
     <main className="min-h-screen bg-bg-primary">
       <Navigation />
       <Hero />
+      <Projects />
       <About />
       <TechStack />
-      <Projects />
       <Blog />
       <Contact />
     </main>
