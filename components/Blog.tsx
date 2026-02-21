@@ -82,8 +82,17 @@ export default function Blog() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.4 }}
-          className="mt-8 text-center"
+          className="mt-8 flex items-center justify-center gap-6"
         >
+          <a
+            href="https://chintan-blog.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-accent text-bg-primary font-medium rounded-full hover:bg-accent-hover transition-colors text-sm"
+          >
+            Read my blog
+            <ArrowUpRight size={14} />
+          </a>
           <a
             href="https://chintandiwakar.medium.com"
             target="_blank"

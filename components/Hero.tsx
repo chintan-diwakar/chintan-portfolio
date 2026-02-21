@@ -92,7 +92,7 @@ export default function Hero() {
               LinkedIn
             </a>
             <a
-              href="https://chintandiwakar.medium.com"
+              href="https://chintan-blog.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-text-primary hover:bg-accent hover:border-accent hover:text-bg-primary transition-all duration-300"
