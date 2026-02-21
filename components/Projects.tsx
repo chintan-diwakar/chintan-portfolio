@@ -2,18 +2,20 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react'
+import { ExternalLink, Github, ArrowUpRight, Monitor, Bot, FlaskConical, MessageSquare, TrendingUp, HardDrive } from 'lucide-react'
 
 const projects = [
   {
-    title: 'FlowSocial',
-    tagline: 'Social media marketing, reimagined',
+    title: 'Remote Terminal',
+    tagline: 'Your terminal, anywhere',
     description:
-      'Premium social media marketing platform with buttery GSAP animations, responsive layouts, and a conversion-focused design system. Built for a real client, shipped to production.',
-    tech: ['Next.js', 'TypeScript', 'GSAP', 'Tailwind CSS'],
-    github: 'https://github.com/chintan-diwakar/flowsocial-website',
-    live: 'https://flowsocial-website.vercel.app',
+      'Access your dev workspace via browser, Telegram, or AI — secured with Tailscale. Full terminal access from any device, anywhere.',
+    tech: ['Node.js', 'Tailscale', 'Telegram API', 'WebSocket'],
+    github: 'https://github.com/chintan-diwakar/remote-terminal',
+    live: null,
+    icon: Monitor,
     accent: '#3b82f6',
+    emoji: '🖥️',
   },
   {
     title: 'Super Agent',
@@ -23,7 +25,57 @@ const projects = [
     tech: ['Python', 'LangGraph', 'LangChain', 'Slack API'],
     github: 'https://github.com/chintan-diwakar/super-agent',
     live: null,
+    icon: Bot,
     accent: '#f59e0b',
+    emoji: '🦸',
+  },
+  {
+    title: 'CopyBrewery',
+    tagline: 'Brew fresh marketing copy from the web',
+    description:
+      'AI-powered tool that scrapes the web and brews fresh, compelling marketing copy. Feed it a URL, get back high-converting copy tailored to your brand.',
+    tech: ['Python', 'OpenAI', 'Web Scraping', 'NLP'],
+    github: 'https://github.com/ChintanDiwakar/copybrewery',
+    live: null,
+    icon: FlaskConical,
+    accent: '#10b981',
+    emoji: '🧪',
+  },
+  {
+    title: 'AskMyCode.xyz',
+    tagline: 'Chat with your codebase, privacy-first',
+    description:
+      'Talk to your codebase in natural language. Everything runs locally — no code leaves your machine. Understands context, finds bugs, explains logic.',
+    tech: ['TypeScript', 'LLM', 'RAG', 'Privacy-first'],
+    github: null,
+    live: 'https://askmycode.xyz',
+    icon: MessageSquare,
+    accent: '#8b5cf6',
+    emoji: '💬',
+  },
+  {
+    title: 'Zentickr Yahoo Query MCP',
+    tagline: 'Financial data at your fingertips',
+    description:
+      'MCP server that pipes Yahoo Finance data directly into your AI tools. Real-time quotes, historical data, and financial analysis — all through a clean interface.',
+    tech: ['TypeScript', 'MCP', 'Yahoo Finance', 'API'],
+    github: 'https://github.com/chintan-diwakar/zentickr-yahoo-query-mcp',
+    live: null,
+    icon: TrendingUp,
+    accent: '#ef4444',
+    emoji: '📈',
+  },
+  {
+    title: 'AWS Utility',
+    tagline: 'AWS credentials & S3, simplified',
+    description:
+      'Clean web interface for managing AWS credentials and browsing S3 buckets. No more fumbling with CLI for quick checks.',
+    tech: ['Next.js', 'AWS SDK', 'S3', 'IAM'],
+    github: null,
+    live: 'https://aws-utility.vercel.app',
+    icon: HardDrive,
+    accent: '#f97316',
+    emoji: '🪣',
   },
 ]
 
@@ -46,76 +98,79 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, idx) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="group relative"
             >
-              <div className="relative p-8 sm:p-10 rounded-2xl bg-bg-secondary border border-white/5 hover:border-white/10 transition-all duration-500 overflow-hidden">
+              <div className="relative h-full p-7 sm:p-8 rounded-2xl bg-bg-secondary border border-white/5 hover:border-white/10 transition-all duration-500 overflow-hidden">
                 {/* Hover gradient */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
-                    background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${project.accent}08, transparent 40%)`,
+                    background: `radial-gradient(400px circle at 50% 50%, ${project.accent}10, transparent 60%)`,
                   }}
                 />
 
-                <div className="relative z-10">
-                  {/* Header row */}
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">{project.title}</h3>
-                        <div
-                          className="w-2 h-2 rounded-full"
-                          style={{ backgroundColor: project.accent }}
-                        />
-                      </div>
-                      <p className="text-text-secondary text-sm italic">{project.tagline}</p>
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Icon + Title row */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div
+                      className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center text-lg"
+                      style={{ backgroundColor: `${project.accent}15` }}
+                    >
+                      <project.icon size={20} style={{ color: project.accent }} />
                     </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl font-bold tracking-tight">{project.title}</h3>
+                      <p className="text-text-secondary text-sm">{project.tagline}</p>
+                    </div>
+                  </div>
 
-                    <div className="flex items-center gap-3 shrink-0">
+                  <p className="text-text-secondary leading-relaxed text-sm mb-5 flex-1">
+                    {project.description}
+                  </p>
+
+                  {/* Tech tags */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="px-2.5 py-1 text-xs font-medium rounded-full border border-white/10 text-text-secondary"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+                    {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1.5 text-sm text-text-secondary hover:text-accent transition-colors"
                       >
-                        <Github size={16} />
-                        Code
+                        <Github size={15} />
+                        Source
                       </a>
-                      {project.live && (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-sm px-4 py-1.5 rounded-full bg-accent/10 text-accent hover:bg-accent hover:text-bg-primary transition-all duration-300"
-                        >
-                          Live
-                          <ArrowUpRight size={14} />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-
-                  <p className="text-text-secondary leading-relaxed mb-6 max-w-2xl">
-                    {project.description}
-                  </p>
-
-                  {/* Tech tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="px-3 py-1 text-xs font-medium rounded-full border border-white/10 text-text-secondary"
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-sm px-4 py-1.5 rounded-full bg-accent/10 text-accent hover:bg-accent hover:text-bg-primary transition-all duration-300 ml-auto"
                       >
-                        {t}
-                      </span>
-                    ))}
+                        Live
+                        <ArrowUpRight size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -127,7 +182,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.8 }}
           className="mt-12 text-center"
         >
           <a
@@ -136,7 +191,7 @@ export default function Projects() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-text-secondary hover:text-accent transition-colors text-sm"
           >
-            View all 15+ repos on GitHub
+            View all repos on GitHub
             <ArrowUpRight size={14} />
           </a>
         </motion.div>
