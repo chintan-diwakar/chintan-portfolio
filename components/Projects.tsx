@@ -13,7 +13,8 @@ const projects = [
     tech: ['Node.js', 'Tailscale', 'Telegram API', 'WebSocket'],
     github: 'https://github.com/chintan-diwakar/remote-terminal',
     live: null,
-    icon: Monitor,
+    icon: null,
+    customIcon: '/remote-terminal.jpg',
     accent: '#3b82f6',
     emoji: '🖥️',
   },
@@ -120,10 +121,14 @@ export default function Projects() {
                   {/* Icon + Title row */}
                   <div className="flex items-start gap-4 mb-4">
                     <div
-                      className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center text-lg"
+                      className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center text-lg overflow-hidden"
                       style={{ backgroundColor: `${project.accent}15` }}
                     >
-                      <project.icon size={20} style={{ color: project.accent }} />
+                      {(project as any).customIcon ? (
+                        <img src={(project as any).customIcon} alt={project.title} className="w-full h-full object-contain" />
+                      ) : project.icon ? (
+                        <project.icon size={20} style={{ color: project.accent }} />
+                      ) : null}
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-xl font-bold tracking-tight">{project.title}</h3>
