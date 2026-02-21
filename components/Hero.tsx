@@ -117,16 +117,7 @@ export default function Hero() {
             
             {/* Photo container — replace src with your photo */}
             <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-white/10 bg-bg-secondary relative">
-              {/* Replace this with your image:
-                  1. Add your photo to /public/chintan.jpg
-                  2. Uncomment the img tag below
-                  3. Remove the placeholder div */}
-              {/* <img src="/chintan.jpg" alt="Chintan Diwakar" className="w-full h-full object-cover" /> */}
-              
-              {/* Placeholder — remove after adding photo */}
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent/20 to-bg-secondary">
-                <span className="text-6xl font-bold text-accent/40">CD</span>
-              </div>
+              <img src="/chintan.jpg" alt="Chintan Diwakar" className="w-full h-full object-cover" />
             </div>
 
             {/* Accent dot */}
