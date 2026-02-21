@@ -117,7 +117,7 @@ export default function Hero() {
             
             {/* Photo container — replace src with your photo */}
             <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-white/10 bg-bg-secondary relative">
-              <img src="/chintan.jpg" alt="Chintan Diwakar" className="w-full h-full object-cover object-[75%_15%]" />
+              <img src="/chintan.jpg" alt="Chintan Diwakar" className="w-full h-full object-cover object-[85%_10%]" />
             </div>
 
             {/* Accent dot */}
