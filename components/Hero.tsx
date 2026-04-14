@@ -1,17 +1,20 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, FileText } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, FileText } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
       {/* Background grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(255,107,53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.3) 1px, transparent 1px)`,
-        backgroundSize: '60px 60px',
-      }} />
-      
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,107,53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.3) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
+
       {/* Floating accent orbs */}
       <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/4 -left-32 w-64 h-64 bg-accent/5 rounded-full blur-[100px]" />
@@ -27,7 +30,9 @@ export default function Hero() {
             className="flex items-center gap-3 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-sm text-text-secondary font-light tracking-wide">Available for work · Mumbai, India</span>
+            <span className="text-sm text-text-secondary font-light tracking-wide">
+              Available for work · Mumbai, India
+            </span>
           </motion.div>
 
           {/* Name */}
@@ -35,7 +40,11 @@ export default function Hero() {
             <motion.h1
               initial={{ y: 100 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.4,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9]"
             >
               Chintan
@@ -45,7 +54,11 @@ export default function Hero() {
             <motion.h1
               initial={{ y: 100 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.5,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9]"
             >
               Diwakar<span className="text-accent">.</span>
@@ -60,9 +73,12 @@ export default function Hero() {
             className="mb-8"
           >
             <p className="text-lg sm:text-xl text-text-secondary max-w-lg leading-relaxed">
-              Full stack developer who builds applications and 
-              <span className="text-accent font-medium"> explores AI agents</span>. 
-              I turn messy problems into clean, working software.
+              Full stack developer who builds applications and
+              <span className="text-accent font-medium">
+                {" "}
+                explores AI agents
+              </span>
+              . I turn messy problems into clean, working software.
             </p>
           </motion.div>
 
@@ -114,10 +130,14 @@ export default function Hero() {
             {/* Decorative ring */}
             <div className="absolute -inset-3 rounded-full border border-accent/20 animate-[spin_20s_linear_infinite]" />
             <div className="absolute -inset-6 rounded-full border border-white/5" />
-            
+
             {/* Photo container — replace src with your photo */}
-            <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-white/10 bg-bg-secondary relative">
-              <img src="/chintan.jpg" alt="Chintan Diwakar" className="w-full h-full object-cover object-[90%_20%] scale-150" />
+            <div className="translate-y-1 w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-white/10 bg-bg-secondary relative">
+              <img
+                src="/chintan.jpg"
+                alt="Chintan Diwakar"
+                className="w-full h-full object-cover object-[130%_70%] scale-125"
+              />
             </div>
 
             {/* Accent dot */}
@@ -141,5 +161,5 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

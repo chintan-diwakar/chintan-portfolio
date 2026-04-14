@@ -1,0 +1,263 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "cd// chintan" [ref=e5] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: "#about"
+            - text: About
+          - link "Stack" [ref=e8] [cursor=pointer]:
+            - /url: "#stack"
+            - text: Stack
+          - link "Work" [ref=e9] [cursor=pointer]:
+            - /url: "#projects"
+            - text: Work
+          - link "Writing" [ref=e10] [cursor=pointer]:
+            - /url: "#blog"
+            - text: Writing
+          - link "Contact" [ref=e11] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Contact
+    - generic [ref=e12]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e20]: Available for work · Mumbai, India
+          - heading "Chintan" [level=1] [ref=e22]
+          - heading "Diwakar." [level=1] [ref=e24]
+          - paragraph [ref=e26]: Full stack developer who builds applications and explores AI agents. I turn messy problems into clean, working software.
+          - generic [ref=e27]:
+            - link "GitHub" [ref=e28] [cursor=pointer]:
+              - /url: https://github.com/chintan-diwakar
+              - img [ref=e29]
+              - text: GitHub
+            - link "LinkedIn" [ref=e32] [cursor=pointer]:
+              - /url: https://linkedin.com/in/chintandiwakar
+              - img [ref=e33]
+              - text: LinkedIn
+            - link "Blog" [ref=e37] [cursor=pointer]:
+              - /url: https://chintan-blog.vercel.app
+              - img [ref=e38]
+              - text: Blog
+        - img "Chintan Diwakar" [ref=e46]
+      - img [ref=e50]
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - text: Work
+        - heading "Things I've built." [level=2] [ref=e55]
+      - generic [ref=e56]:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - img "Remote Terminal" [ref=e63]
+            - generic [ref=e64]:
+              - heading "Remote Terminal" [level=3] [ref=e65]
+              - paragraph [ref=e66]: Your terminal, anywhere
+          - paragraph [ref=e67]: Access your dev workspace via browser, Telegram, or AI — secured with Tailscale. Full terminal access from any device, anywhere.
+          - generic [ref=e68]:
+            - generic [ref=e69]: Node.js
+            - generic [ref=e70]: Tailscale
+            - generic [ref=e71]: Telegram API
+            - generic [ref=e72]: WebSocket
+          - link "Source" [ref=e74] [cursor=pointer]:
+            - /url: https://github.com/chintan-diwakar/remote-terminal
+            - img [ref=e75]
+            - text: Source
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - img "Super Agent" [ref=e84]
+            - generic [ref=e85]:
+              - heading "Super Agent" [level=3] [ref=e86]
+              - paragraph [ref=e87]: AI agents that actually do stuff
+          - paragraph [ref=e88]: Multi-agent Slack bot where each agent has a superhero persona and specialized skills. Powered by LangGraph for complex multi-step workflows — task routing, memory, and autonomous execution.
+          - generic [ref=e89]:
+            - generic [ref=e90]: Python
+            - generic [ref=e91]: LangGraph
+            - generic [ref=e92]: LangChain
+            - generic [ref=e93]: Slack API
+          - link "Source" [ref=e95] [cursor=pointer]:
+            - /url: https://github.com/chintan-diwakar/super-agent
+            - img [ref=e96]
+            - text: Source
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - img "CopyBrewery" [ref=e105]
+            - generic [ref=e106]:
+              - heading "CopyBrewery" [level=3] [ref=e107]
+              - paragraph [ref=e108]: Brew fresh marketing copy from the web
+          - paragraph [ref=e109]: AI-powered tool that scrapes the web and brews fresh, compelling marketing copy. Feed it a URL, get back high-converting copy tailored to your brand.
+          - generic [ref=e110]:
+            - generic [ref=e111]: Python
+            - generic [ref=e112]: OpenAI
+            - generic [ref=e113]: Web Scraping
+            - generic [ref=e114]: NLP
+          - link "Source" [ref=e116] [cursor=pointer]:
+            - /url: https://github.com/ChintanDiwakar/copybrewery
+            - img [ref=e117]
+            - text: Source
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - img "AskMyCode.xyz" [ref=e126]
+            - generic [ref=e127]:
+              - heading "AskMyCode.xyz" [level=3] [ref=e128]
+              - paragraph [ref=e129]: Chat with your codebase, privacy-first
+          - paragraph [ref=e130]: Talk to your codebase in natural language. Everything runs locally — no code leaves your machine. Understands context, finds bugs, explains logic.
+          - generic [ref=e131]:
+            - generic [ref=e132]: TypeScript
+            - generic [ref=e133]: LLM
+            - generic [ref=e134]: RAG
+            - generic [ref=e135]: Privacy-first
+          - link "Live" [ref=e137] [cursor=pointer]:
+            - /url: https://askmycode.xyz
+            - text: Live
+            - img [ref=e138]
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - img "Zentickr Yahoo Query MCP" [ref=e147]
+            - generic [ref=e148]:
+              - heading "Zentickr Yahoo Query MCP" [level=3] [ref=e149]
+              - paragraph [ref=e150]: Financial data at your fingertips
+          - paragraph [ref=e151]: MCP server that pipes Yahoo Finance data directly into your AI tools. Real-time quotes, historical data, and financial analysis — all through a clean interface.
+          - generic [ref=e152]:
+            - generic [ref=e153]: TypeScript
+            - generic [ref=e154]: MCP
+            - generic [ref=e155]: Yahoo Finance
+            - generic [ref=e156]: API
+          - link "Source" [ref=e158] [cursor=pointer]:
+            - /url: https://github.com/chintan-diwakar/zentickr-yahoo-query-mcp
+            - img [ref=e159]
+            - text: Source
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - img "AWS Utility" [ref=e168]
+            - generic [ref=e169]:
+              - heading "AWS Utility" [level=3] [ref=e170]
+              - paragraph [ref=e171]: AWS credentials & S3, simplified
+          - paragraph [ref=e172]: Clean web interface for managing AWS credentials and browsing S3 buckets. No more fumbling with CLI for quick checks.
+          - generic [ref=e173]:
+            - generic [ref=e174]: Next.js
+            - generic [ref=e175]: AWS SDK
+            - generic [ref=e176]: S3
+            - generic [ref=e177]: IAM
+          - link "Live" [ref=e179] [cursor=pointer]:
+            - /url: https://aws-utility.vercel.app
+            - text: Live
+            - img [ref=e180]
+      - link "View all repos on GitHub" [ref=e184] [cursor=pointer]:
+        - /url: https://github.com/chintan-diwakar?tab=repositories
+        - text: View all repos on GitHub
+        - img [ref=e185]
+    - generic [ref=e190]:
+      - generic [ref=e192]:
+        - text: About
+        - heading "Not your typical developer bio." [level=2] [ref=e193]:
+          - text: Not your typical
+          - text: developer bio.
+      - generic [ref=e194]:
+        - paragraph [ref=e195]: I'm a full stack developer based in Mumbai who's been deep in the trenches of web development and AI. I don't just build CRUD apps — I build systems that think.
+        - paragraph [ref=e196]: Right now I'm obsessed with multi-agent architectures, LangGraph workflows, and making AI actually useful in production (not just demos). I've shipped social media platforms, built Slack bots with superhero agents, and written about the intersection of AI and developer productivity.
+        - paragraph [ref=e197]: My stack is whatever gets the job done — usually TypeScript on the front, Python on the back, and AWS holding it all together. But I'm not religious about tools. I'm religious about shipping.
+        - generic [ref=e198]:
+          - generic [ref=e199]:
+            - generic [ref=e200]: 15+
+            - generic [ref=e201]: Public repos
+          - generic [ref=e202]:
+            - generic [ref=e203]: 5+
+            - generic [ref=e204]: Tech domains
+          - generic [ref=e205]:
+            - generic [ref=e206]: ∞
+            - generic [ref=e207]: Curiosity
+    - generic [ref=e209]:
+      - generic [ref=e210]:
+        - text: Stack
+        - heading "Tools I reach for." [level=2] [ref=e211]
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - heading "Frontend" [level=3] [ref=e217]
+          - generic [ref=e218]:
+            - generic [ref=e219]: React
+            - generic [ref=e220]: Next.js
+            - generic [ref=e221]: TypeScript
+            - generic [ref=e222]: TailwindCSS
+        - generic [ref=e223]:
+          - heading "Backend" [level=3] [ref=e227]
+          - generic [ref=e228]:
+            - generic [ref=e229]: Python
+            - generic [ref=e230]: Node.js
+            - generic [ref=e231]: FastAPI
+            - generic [ref=e232]: Express
+        - generic [ref=e233]:
+          - heading "AI / ML" [level=3] [ref=e237]
+          - generic [ref=e238]:
+            - generic [ref=e239]: OpenAI
+            - generic [ref=e240]: Claude
+            - generic [ref=e241]: LangChain
+            - generic [ref=e242]: LangGraph
+        - generic [ref=e243]:
+          - heading "Cloud" [level=3] [ref=e247]
+          - generic [ref=e248]:
+            - generic [ref=e249]: AWS
+            - generic [ref=e250]: Vercel
+            - generic [ref=e251]: Railway
+            - generic [ref=e252]: Docker
+        - generic [ref=e253]:
+          - heading "Data" [level=3] [ref=e257]
+          - generic [ref=e258]:
+            - generic [ref=e259]: MongoDB
+            - generic [ref=e260]: PostgreSQL
+            - generic [ref=e261]: SQLite
+            - generic [ref=e262]: Redis
+    - generic [ref=e264]:
+      - generic [ref=e265]:
+        - text: Writing
+        - heading "Thinking out loud." [level=2] [ref=e266]
+        - paragraph [ref=e267]: Occasional posts about AI, development, and building things in public.
+      - 'link "Reflection 4 min AI is slowing down our Brain — Maybe or Maybe Not! A short reflection on whether our reliance on AI tools is dulling our thinking — or just changing how we think. Spoiler: it''s complicated." [ref=e269] [cursor=pointer]':
+        - /url: https://chintandiwakar.medium.com/ai-is-slowing-down-our-brain-maybe-or-maybe-not-short-reflection-3a24ec656fec
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]: Reflection
+              - generic [ref=e274]:
+                - img [ref=e275]
+                - text: 4 min
+            - heading "AI is slowing down our Brain — Maybe or Maybe Not!" [level=3] [ref=e278]
+            - paragraph [ref=e279]: "A short reflection on whether our reliance on AI tools is dulling our thinking — or just changing how we think. Spoiler: it's complicated."
+          - img [ref=e282]
+      - generic [ref=e285]:
+        - link "Read my blog" [ref=e286] [cursor=pointer]:
+          - /url: https://chintan-blog.vercel.app
+          - text: Read my blog
+          - img [ref=e287]
+        - link "More on Medium" [ref=e290] [cursor=pointer]:
+          - /url: https://chintandiwakar.medium.com
+          - text: More on Medium
+          - img [ref=e291]
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - text: Contact
+        - heading "Let's build something." [level=2] [ref=e298]
+        - paragraph [ref=e299]: Got a project idea, a collaboration, or just want to talk code? I'm always open to interesting conversations.
+      - generic [ref=e300]:
+        - link "GitHub @chintan-diwakar" [ref=e301] [cursor=pointer]:
+          - /url: https://github.com/chintan-diwakar
+          - img [ref=e302]
+          - generic [ref=e305]:
+            - generic [ref=e306]: GitHub
+            - generic [ref=e307]: "@chintan-diwakar"
+        - link "LinkedIn /in/chintandiwakar" [ref=e308] [cursor=pointer]:
+          - /url: https://linkedin.com/in/chintandiwakar
+          - img [ref=e309]
+          - generic [ref=e313]:
+            - generic [ref=e314]: LinkedIn
+            - generic [ref=e315]: /in/chintandiwakar
+        - link "Medium @chintandiwakar" [ref=e316] [cursor=pointer]:
+          - /url: https://chintandiwakar.medium.com
+          - img [ref=e317]
+          - generic [ref=e320]:
+            - generic [ref=e321]: Medium
+            - generic [ref=e322]: "@chintandiwakar"
+      - generic [ref=e323]:
+        - paragraph [ref=e324]: Designed & built by Chintan Diwakar · 2026
+        - paragraph [ref=e325]: Built with Next.js, Tailwind CSS & Framer Motion
+  - alert [ref=e326]
