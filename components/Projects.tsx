@@ -17,6 +17,17 @@ const projects = [
     accent: '#3b82f6',
   },
   {
+    title: 'react-xray',
+    tagline: 'Per-page component reachability for React',
+    description:
+      'Static-analysis CLI for React and Next.js apps. Builds a per-page → component reachability matrix, flags strictly-unused and unreachable components, and emits a self-contained HTML report you can drop in a PR.',
+    tech: ['TypeScript', 'oxc', 'Next.js', 'CLI'],
+    github: 'https://github.com/chintan-diwakar/react-xray',
+    live: 'https://www.npmjs.com/package/@chintandiwakar1/react-xray',
+    icon: '/icons/react-xray.svg',
+    accent: '#22d3ee',
+  },
+  {
     title: 'Super Agent',
     tagline: 'AI agents that actually do stuff',
     description:
