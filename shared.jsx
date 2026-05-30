@@ -393,6 +393,7 @@ function Polaroid({
   const ref = useRef(null);
   const shown = useInView(ref);
   const [hover, setHover] = useState(false);
+  const [pressed, setPressed] = useState(false);
 
   // When animateIn=true: start tilted-further + offset, settle to resting tilt.
   // Otherwise: just sit at resting tilt with no entrance.
@@ -400,14 +401,18 @@ function Polaroid({
   const restTilt = tilt;
   const finalTilt = hover ? 0 : restTilt;
   const finalY = hover ? -6 : 0;
-  const finalScale = hover ? 1.03 : 1;
+  // Mobile tap: press down to 0.98, spring back to 1 — like touching a real photo.
+  const finalScale = pressed ? 0.98 : (hover ? 1.03 : 1);
 
   return (
     <figure
       ref={ref}
       className={animateIn ? `cd-polaroid ${shown ? 'is-in' : ''}` : ''}
       onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      onMouseLeave={() => { setHover(false); setPressed(false); }}
+      onPointerDown={() => setPressed(true)}
+      onPointerUp={() => setPressed(false)}
+      onPointerCancel={() => setPressed(false)}
       style={{
         position: 'relative',
         background: '#FBFAF4',
