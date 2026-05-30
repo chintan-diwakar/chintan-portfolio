@@ -1,0 +1,17 @@
+# gstack browser daemon state / logs
+.gstack/
+
+# design scratch (AI design-tool project: chats, uploads, duplicate assets)
+_design/
+
+# unused source media (site uses photos/malaysia.mp4)
+photos/malaysia.mov
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# dependencies / build output (none currently)
+node_modules/
+dist/
